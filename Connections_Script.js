@@ -122,7 +122,7 @@ function shuffleBoard(table){
                     }
                 }
                 var correctGroup = document.getElementById("group" + color);
-                correctGroup.innerText += "Group " + (color + 1) + ": " + groups[color];
+                correctGroup.innerText = "Group " + (color + 1) + ": " + groups[color];
                 correctGroup.style.display = "inline";
                 correctGroup.style.backgroundColor = colors[color];
 
@@ -156,9 +156,9 @@ function shuffleBoard(table){
 
  function resetBoard(table,groups,words){
         // Use your JSON data here
+         const jsonString = getJsonData();
+         const data = JSON.parse(jsonString);
          if (table) {
-             const jsonString = getJsonData();
-             const data = JSON.parse(jsonString);
              var attempts = document.getElementById("attempts");
              attempts.innerText = 3;
              attempts.style.display = "inline";
@@ -210,7 +210,6 @@ function shuffleBoard(table){
              shuffleBoard(document);
          }
           resetBtn.onclick = function() {
-                          sets = [];
                           resetBoard(table,groups,words);
                      };
 
