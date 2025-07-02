@@ -156,6 +156,7 @@ function shuffleBoard(table){
 
  function resetBoard(table,groups,words){
         // Use your JSON data here
+         var sets = [];
          if (table) {
              const jsonString = getJsonData();
              const data = JSON.parse(jsonString);
@@ -210,6 +211,7 @@ function shuffleBoard(table){
              shuffleBoard(document);
          }
           resetBtn.onclick = function() {
+                          sets = [];
                           resetBoard(table,groups,words);
                      };
 
