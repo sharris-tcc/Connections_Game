@@ -156,7 +156,6 @@ function shuffleBoard(table){
 
  function resetBoard(table,groups,words){
         // Use your JSON data here
-         var sets = [];
          if (table) {
              const jsonString = getJsonData();
              const data = JSON.parse(jsonString);
@@ -176,7 +175,7 @@ function shuffleBoard(table){
              }
 
              var colors = ["#33ff36","#f6ff33","#ffbe33","#33ceff"];
-             sets = getRandomIntArray(0, 200);
+             var sets = getRandomIntArray(0, 200);
              var currentSet = -1;
              var currentItem = 0;
              groups = [];
