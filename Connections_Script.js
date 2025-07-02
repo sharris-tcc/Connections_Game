@@ -156,9 +156,10 @@ function shuffleBoard(table){
 
  function resetBoard(table,groups,words){
         // Use your JSON data here
-         const jsonString = getJsonData();
-         const data = JSON.parse(jsonString);
+
          if (table) {
+             const jsonString = getJsonData();
+             const data = JSON.parse(jsonString);
              var attempts = document.getElementById("attempts");
              attempts.innerText = 3;
              attempts.style.display = "inline";
