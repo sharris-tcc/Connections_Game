@@ -211,6 +211,8 @@ function shuffleBoard(table){
              shuffleBoard(document);
          }
           resetBtn.onclick = function() {
+                          groups = [];
+                          words = [];
                           resetBoard(table,groups,words);
                      };
 
