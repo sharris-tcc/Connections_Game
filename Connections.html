@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="Connections_Styles.css">
+<script type="text/javascript" src="Connections_Script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Connections</title>
+</head>
+<body>
+
+<div class="title">
+    <h1>Connections</h1>
+</div>
+
+<div style="display: inline-block; width: 75vw;">
+<div style="display: grid; place-items: center; height: 80vh; position: relative;">
+    <table class="steelBlueCols" id="board">
+        <tr>
+            <td id="rc00"></td>
+            <td id="rc01"></td>
+            <td id="rc02"></td>
+            <td id="rc03"></td>
+        </tr>
+        <tr>
+            <td id="rc10"></td>
+            <td id="rc11"></td>
+            <td id="rc12"></td>
+            <td id="rc13"></td>
+        </tr>
+        <tr>
+            <td id="rc20"></td>
+            <td id="rc21"></td>
+            <td id="rc22"></td>
+            <td id="rc23"></td>
+        </tr>
+        <tr>
+            <td id="rc30"></td>
+            <td id="rc31"></td>
+            <td id="rc32"></td>
+            <td id="rc33"></td>
+    </table>
+</div></div>
+<div style="display: inline-block; position: absolute;">
+<table >
+    <tr><br><br><td><button id="submitBtn" class="btn">Submit</button></td></tr>
+    <tr><td><br><br><button id="resetBtn" class="btn"> Reset </button></td></tr>
+</table>
+<table>
+    <tr><td id="attemptsText" class="groups">Attempts Remaining: </td><td id="attempts" class="groups"></td></tr>
+    <tr><td id="setsSolved" class="groups"></td></tr>
+    <tr><br><br><td id="group0" class="groups"></td></tr>
+    <tr><td ></td></tr>
+    <tr><td id="group1" class="groups"></td></tr>
+    <tr><td ></td></tr>
+    <tr><td id="group2" class="groups"></td></tr>
+    <tr><td ></td></tr>
+    <tr><td id="group3" class="groups"></td></tr>
+</table>
+
+</div>
+<script>
+
+
+ const table = document.getElementById("board");
+ const submitBtn = document.getElementById("submitBtn");
+ const resetBtn = document.getElementById("resetBtn");
+ let groups = [];
+ let words = [];
+
+ resetBoard(table,groups,words);
+
+</script>
+
+</body>
+</html>
